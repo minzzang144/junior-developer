@@ -25,3 +25,122 @@ GraphQL은 REST API의 Overfetching과 Underfetching 문제를 단 하나의 Que
 하지만 받아야 할 항목이 많아 GraphQL의 Query에 적어서 요청하는 것보다 REST API로 한번에 요청하는 것이 더 좋을 경우도 있다.<br>
 
 즉, REST API와 GraphQL 어느쪽이 더 좋고 나쁘다기보단 요구하는 정보에 따라 요청이 복잡하더라도 원하는 정보만 받아올 GraphQL 또는 요청은 간단하지만 많은 데이터를 받을 REST API, 둘 중 하나를 잘 선택해서 사용하는 것이 중요하다.<br>
+
+### GraphQL로 정보 주고받아보기
+
+REST API에서는 정보를 주고 받기위해 자원(URI)과 행위(Method)를 통해 정보를 주고 받을 수 있었다.<br>
+
+GraphQL은 REST API와 비교해 어떤 방식으로 정보를 주고받을 수 있는지 알아보자.<br>
+
+- 정보 받아오기
+
+  ```
+  query {
+    classes {
+      id
+      student_number
+    }
+  }
+  ```
+
+  REST API에서도 명사를 지향했듯이 GraphQL에서도 명사를 지향한다. 그리고 Document라면 단수를 Collection이라면 복수형태를 사용하자.
+
+  원하는 만큼 쿼리를 추가해서 받아올 수 있다. 반의 선생님이 누구인지도 알고 싶다면 classes 객체 안에 teacher_name도 추가하는 방식이다.
+
+- 필요한 정보만 받아오기
+
+  ```
+  query {
+    class(id: 1) {
+      id
+      teacher_name
+      student_number
+    }
+  }
+  ```
+
+  쿼리에 인자를 추가해서 원하는 반의 정보만 받아올 수 있다.
+
+- 복합되어 있는 정보 받아오기
+
+  ```
+  query {
+    class(id: 1) {
+      id
+      teacher_name
+      student_number
+      students {
+        first_name
+        last_name
+      }
+    }
+  }
+  ```
+
+  위를 REST API로 받아오려면 Class의 정보를 받아오고 Class의 학생들의 정보를 받아오는 총 2번의 요청이 이루어져야 한다.
+  
+  하지만 GraphQL은 위처럼 한 번의 요청으로도 Class와 Students의 정보들을 받아오는 것이 가능하다.
+
+  또는
+
+  ```
+  query {
+    classes {
+      id
+      teacher_name
+      student_number
+    }
+    roles {
+      id
+      requirement
+    }
+  }
+  ```
+
+  이처럼 2가지의 Query를 요청하는 것도 가능하다.
+
+- 정보 추가하기
+
+  ```
+  mutation {
+    postClass (input: {
+      id: "nextId"
+      teacher_name: "Tsuel"
+      student_number: 40
+    }) {
+      id
+      teacher_name
+      student_number
+    }
+  }
+  ```
+
+  정보를 조회하는 요청 Query와 달리 Mutaion을 사용한다.
+
+  REST API는 행위를 표현하기 위해 Method를 사용하였지만 GraphQL은 하나의 URI에서 모든 행위가 POST로 이루어지고 행위에 대한 표현을 명령어로 나타낸다.
+
+- 정보 수정 및 삭제
+
+  ```
+  mutation {
+    editClass (id:2, input: {
+      id: "nextId"
+      teacher_name: "Shigatsu"
+      student_number: 35
+    }) {
+      id,
+      teacher_name,
+      student_number,
+    }
+  }
+  ```
+
+  ```
+  mutation {
+    deleteClass (id:2) {
+      id,
+      teacher_name,
+      student_number,
+    }
+  }
+  ```
