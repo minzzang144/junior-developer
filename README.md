@@ -24,6 +24,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Lexical Scope](./Record/JavaScript/LexicalScope/LexicalScope.md)
 
+- [Function Scope VS Block Scope](./Record/JavaScript/FVSB-Scope/FVSB-Scope.md)
+
 ### 프론트엔드 CS
 
 - [브라우저 동작 원리](./Record/FrontEnd/Render/Render.md)
