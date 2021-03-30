@@ -35,3 +35,5 @@ Organize What I Studied until I Became a Junior Developer<br>
 - [REST API](./Record/BackEnd/RestAPI/RestAPI.md)
 
 - [GraphQL](./Record/BackEnd/GraphQL/GraphQL.md)
+
+- [GraphQL Query](./Record/BackEnd/GraphQL/Query.md)
