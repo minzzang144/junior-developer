@@ -22,6 +22,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Scope](./Record/JavaScript/Scope/Scope.md)
 
+- [Lexical Scope](./Record/JavaScript/LexicalScope/LexicalScope.md)
+
 ### 프론트엔드 CS
 
 - [브라우저 동작 원리](./Record/FrontEnd/Render/Render.md)
