@@ -16,9 +16,9 @@ typeDefs와 resolver는 하나의 Document로 이루어져도 되지만 여러 �
 
 나눠야 할 목록들<br>
 
-1. 루트 Query 타입
+1. 루트 타입 Query
 
-2. 루트 Mutation 타입
+2. 루트 타입 Mutation
 
 3. 단일 typeDefs와 resolver
 
@@ -26,7 +26,7 @@ typeDefs와 resolver는 하나의 Document로 이루어져도 되지만 여러 �
 
 Equipment를 예를 들어보자.<br>
 
-- 루트 Query 타입
+- 루트 타입 Query
 
   ```
   const typeDefs = gql`
@@ -36,7 +36,7 @@ Equipment를 예를 들어보자.<br>
   `
   ```
 
-- 루트 Mutation 타입
+- 루트 타입 Mutation
 
   ```
   // ...
@@ -103,3 +103,5 @@ const resolvers = [
 한 파일에 모든 정의와 기능을 집어넣는 것보다 훨씬 깔끔한 코드가 되었다.<br>
 
 출처: 얄팍한 코딩사전 [GraphQL & Apollo 강좌](https://www.youtube.com/watch?v=9BIXcXHsj0A&t=221s)
+
+[다음 글 보러가기 -> GraphQL Type](./Type.md)
