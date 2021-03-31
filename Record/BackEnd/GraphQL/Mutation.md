@@ -155,3 +155,5 @@
   ```
 
 출처: 얄팍한 코딩사전 [GraphQL & Apollo 강좌](https://www.youtube.com/watch?v=9BIXcXHsj0A&t=221s)
+
+[다음 글 보러가기 -> GraphQL Server Modularized](./Modularize.md)

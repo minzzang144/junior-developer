@@ -37,3 +37,7 @@ Organize What I Studied until I Became a Junior Developer<br>
 - [GraphQL](./Record/BackEnd/GraphQL/GraphQL.md)
 
 - [GraphQL Query](./Record/BackEnd/GraphQL/Query.md)
+
+- [GraphQL Mutation](./Record/BackEnd/GraphQL/Mutation.md)
+
+- [GraphQL Server Modularized](./Record/BackEnd/GraphQL/Modularize.md)
