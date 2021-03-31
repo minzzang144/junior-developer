@@ -44,3 +44,4 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [GraphQL Type](./Record/BackEnd/GraphQL/Type.md)
 
+- [GraphQL Input](./Record/BackEnd/GraphQL/Input.md)

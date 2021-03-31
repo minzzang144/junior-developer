@@ -227,3 +227,5 @@ type Software implements Tool {
 요청해야할 필드들이 많아지고 복잡해질 경우 Union과 Interface를 사용해 다양하게 활용할 수 있다.<br>
 
 출처: 얄팍한 코딩사전 [GraphQL & Apollo 강좌](https://www.youtube.com/watch?v=9BIXcXHsj0A&t=221s)
+
+[다음 글 보러가기 -> GraphQL Input](./Input.md)
