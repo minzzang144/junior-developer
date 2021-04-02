@@ -33,7 +33,7 @@ console.log(a);
 ```
 console.log(a);
 
-var a =2;
+var a = 2;
 ```
 
 처음 예제해서 했던대로라면 왠지 a의 값은 2가 출력될지도 모른다고 생각하겠지만 이번코드의 결과값은 `undefined`이다.<br>
@@ -184,3 +184,5 @@ foo = function() {
 프로그래밍을 할 때 반드시 변수와 함수명을 중복선언하는 것을 지양해야하는 이유이다.<br>
 
 출처: You don't know JS
+
+[다음 글 보러가기 -> Closure](../Closure/Closure.md)

@@ -28,6 +28,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Hoisting](./Record/JavaScript/Hoisting/Hoisting.md)
 
+- [Closure](./Record/JavaScript/Closure/Closure.md)
+
 ### 프론트엔드 CS
 
 - [브라우저 렌더링 방식](./Record/FrontEnd/Browser-Render/Browser-Render.md)

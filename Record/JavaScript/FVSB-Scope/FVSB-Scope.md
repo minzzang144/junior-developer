@@ -162,7 +162,6 @@ var = 2;
   console.log(a); // 3
 })(); // <-- and this
 
-foo();
 console.log(a);
 ```
 
