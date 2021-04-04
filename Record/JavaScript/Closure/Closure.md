@@ -188,3 +188,5 @@ var는 hoisting이 일어나 글로벌 스코프에 선언됨으로써 반복할
 
 참고 -> You don't know JS
 참고 -> PoiemaWeb
+
+[다음 글 보러가기 -> Closure를 활용한 Module](../Module/Module.md)

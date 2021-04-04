@@ -30,6 +30,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Closure](./Record/JavaScript/Closure/Closure.md)
 
+- [Module](./Record/JavaScript/Closure/Module.md)
+
 ### 프론트엔드 CS
 
 - [브라우저 렌더링 방식](./Record/FrontEnd/Browser-Render/Browser-Render.md)
