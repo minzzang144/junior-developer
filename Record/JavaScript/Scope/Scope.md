@@ -105,4 +105,4 @@ RHS는 중첩 스코프 안 어디에서도 변수를 찾지못하면 **Referenc
 
 출처: You don't know JS<br>
 
-[다음 글로 이동하기 -> Lexical Scope](../LexicalScope/LexicalScope.md)
+[다음 글로 이동하기 -> Lexical Scope](./LexicalScope.md)

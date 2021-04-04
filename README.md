@@ -22,9 +22,9 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Scope](./Record/JavaScript/Scope/Scope.md)
 
-- [Lexical Scope](./Record/JavaScript/LexicalScope/LexicalScope.md)
+  - [Lexical Scope](./Record/JavaScript/Scope/LexicalScope.md)
 
-- [Function Scope VS Block Scope](./Record/JavaScript/FVSB-Scope/FVSB-Scope.md)
+  - [Function Scope VS Block Scope](./Record/JavaScript/Scope/FVSB-Scope.md)
 
 - [Hoisting](./Record/JavaScript/Hoisting/Hoisting.md)
 
@@ -44,12 +44,12 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [GraphQL](./Record/BackEnd/GraphQL/GraphQL.md)
 
-- [GraphQL Query](./Record/BackEnd/GraphQL/Query.md)
+  - [GraphQL Query](./Record/BackEnd/GraphQL/Query.md)
 
-- [GraphQL Mutation](./Record/BackEnd/GraphQL/Mutation.md)
+  - [GraphQL Mutation](./Record/BackEnd/GraphQL/Mutation.md)
 
-- [GraphQL Server Modularized](./Record/BackEnd/GraphQL/Modularize.md)
+  - [GraphQL Server Modularized](./Record/BackEnd/GraphQL/Modularize.md)
 
-- [GraphQL Type](./Record/BackEnd/GraphQL/Type.md)
+  - [GraphQL Type](./Record/BackEnd/GraphQL/Type.md)
 
-- [GraphQL Input](./Record/BackEnd/GraphQL/Input.md)
+  - [GraphQL Input](./Record/BackEnd/GraphQL/Input.md)

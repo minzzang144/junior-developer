@@ -1,6 +1,6 @@
 # Function Scope VS Block Scope
 
-[이전 글로 이동하기 -> Lexical Scope](../LexicalScope/LexicalScope.md)
+[이전 글로 이동하기 -> Lexical Scope](./LexicalScope.md)
 
 ### 함수 기반 스코프
 

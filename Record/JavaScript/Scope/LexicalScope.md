@@ -1,6 +1,6 @@
 # Lexical Scope
 
-[이전 글로 이동하기 -> Scope](../Scope/Scope.md)
+[이전 글로 이동하기 -> Scope](./Scope.md)
 
 Scope를 다시 복습해보자면 엔진이 현재 스코프 또는 중첩 스코프 내에서 변수를 찾을 때 사용하는 규칙으로 정의했다.<br>
 
@@ -40,4 +40,4 @@ eval 함수와 with함수가 대표적인 예이다.<br>
 
 eval과 with를 사용했다는 사실 하나만으로도 최적화가 무의미해지기 때문에 이러한 방법은 피해야 한다.<br>
 
-[다음 글로 이동하기 -> Function Scope VS Block Scope](../FVSB-Scope/FVSB-Scope.md)
+[다음 글로 이동하기 -> Function Scope VS Block Scope](./FVSB-Scope.md)
