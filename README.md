@@ -30,7 +30,7 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Closure](./Record/JavaScript/Closure/Closure.md)
 
-- [Module](./Record/JavaScript/Closure/Module.md)
+- [Module](./Record/JavaScript/Module/Module.md)
 
 ### 프론트엔드 CS
 
@@ -41,6 +41,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 - [브라우저 비동기 처리](./Record/FrontEnd/Asynchronous/Asynchronous.md)
 
   - [콜백 함수](./Record/FrontEnd/Asynchronous/Callback.md)
+
+  - [Promise(프로미스)](./Record/FrontEnd/Asynchronous/Promise.md)
 
 ### 백엔드 CS
 
