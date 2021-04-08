@@ -107,3 +107,82 @@ promise()
 ```
 
 catch메서드는 Promise 비동기 함수에서 발생한 에러(reject)뿐만 아니라 then 내부 메서드에서 발생한 에러도 잡아주기 때문에 일반적으로 then에서 두개의 콜백함수를 받기보다 then과 catch 메서드를 같이 사용하는 것이 좋습니다.<br>
+
+### Promise Chaining
+
+비동기 처리 결과를 가지고 다른 비동기 함수를 호출해야 하는 경우 콜백함수를 사용했을 시, 함수의 호출이 중첩되어 콜백 지옥이 발생한다.<br>
+
+Promise는 후속 처리 메서드를 체이닝하여 여러 프로미스를 연결하여 사용할 수 있는데 콜백함수 대신에 Promise를 사용하는 중요한 이유 중 하나라고 할 수 있습니다.<br>
+
+아까 위에서 후속 처리 메서드인 then과 catch는 하나의 Promise를 반환한다고 했습니다.<br>
+
+이 말은 후속 처리 메서드의 결과값이 Promise이기 때문에 후속 처리 메서드를 연달아서 사용할 수 있다는 뜻입니다.<br>
+
+```
+const url = 'http://jsonplaceholder.typicode.com/posts';
+
+// 포스트 id가 1인 포스트를 검색하고 프로미스를 반환한다.
+promiseAjax('GET', `${url}/1`)
+  // 포스트 id가 1인 포스트를 작성한 사용자의 아이디로 작성된 모든 포스트를 검색하고 프로미스를 반환한다.
+  .then(res => promiseAjax('GET', `${url}?userId=${JSON.parse(res).userId}`))
+  .then(JSON.parse)
+  .then(res => console.log(res))
+  .catch(console.error);
+```
+
+콜백함수를 연달아 쓰는 것보다 Promise Chaining을 하니 동기 처리를 하는 것처럼 코드를 작성할 수 있게 되었습니다.<br>
+
+### Promise 정적 메서드
+
+Promise는 생성자 함수임과 동시에 객체이므로 메서드를 갖을 수 있는데 4가지의 정적 메서드를 가진다.<br>
+
+- resolve
+
+  ```
+  const resolvedPromise = Promise.resolve([1, 2, 3]);
+  resolvedPromise.then(console.log); // [ 1, 2, 3 ]
+
+  위 코드는 아래와 동일하다.
+
+  const resolvedPromise = new Promise(resolve => resolve([1, 2, 3]));
+  resolvedPromise.then(console.log); // [ 1, 2, 3 ]
+  ```
+
+- reject
+
+  ```
+  const rejectedPromise = Promise.reject(new Error('Error!'));
+  rejectedPromise.catch(console.log); // Error: Error!
+
+  위 코드는 아래와 동일하다.
+
+  const rejectedPromise = new Promise((resolve, reject) => reject(new Error('Error!')));
+  rejectedPromise.catch(console.log); // Error: Error!
+  ```
+
+- all
+
+  Promise.all 메서드는 프로미스가 담겨있는 배열을 인자로 전달 받는다.
+
+  전달받은 모든 Promise는 병렬로 처리되며 그 처리 결과를 resolve하는 새로운 Promise를 반환한다.
+
+  ```
+  Promise.all([
+    new Promise(resolve => setTimeout(() => resolve(1), 3000)), // 1
+    new Promise(resolve => setTimeout(() => resolve(2), 2000)), // 2
+    new Promise(resolve => setTimeout(() => resolve(3), 1000))  // 3
+  ]).then(console.log) // [ 1, 2, 3 ]
+    .catch(console.log);
+  ```
+
+  각 Promise가 처리한 결과를 배열에 담아 resolve하는 새로운 Promise를 반환
+
+  첫번째 프로미스가 가장 나중에 처리되어도 첫번째 프로미스부터 차례대로 결과값을 배열에 담음(처리 순서가 보장된다)
+
+- race
+
+  Promise.race는 Promise.all과 동일하나 가장 먼저 처리된 프로미스가 resolve되는 새로운 프로미스를 반환한다는 것이다.
+
+  즉, 위 all코드에서 race를 사용하게 되면 가장 먼저 처리된 3 값이 Resolve값으로 처리된다.
+
+  그 외는 동일하다.
