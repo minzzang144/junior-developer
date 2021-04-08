@@ -186,3 +186,5 @@ Promise는 생성자 함수임과 동시에 객체이므로 메서드를 갖을 
   즉, 위 all코드에서 race를 사용하게 되면 가장 먼저 처리된 3 값이 Resolve값으로 처리된다.
 
   그 외는 동일하다.
+
+[다음 글 보러가기 -> Async & Await](./Async-Await.md)
