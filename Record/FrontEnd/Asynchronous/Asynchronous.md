@@ -51,7 +51,7 @@ ajax('https://example.com/api', function(response) {
 자바스크립트 엔진은 ajax()함수를 콜 스택에 넣게 되고(하나만 실행) ajax함수의 콜백함수를 Web APIs에 넘겨주고 ajax()함수를 콜 스택에서 제거합니다.<br>
 (콜백함수는 비동기 처리에서 가장 많이 쓰이는 패턴으로 아래에서 무엇인지 설명하겠습니다. 위 코드에선 function(resoponse){...}를 콜백함수라고 합니다.)<br>
 
-Web APIs는 'https://example.com/api'에서 데이터를 응답받은 후 콜백함수를 태스크 큐에 넣습니다. 이후 콜 스택이 비어있는 것을 확인하면 콜백함수를 콜 스택으로 밀어넣게 되고 콜백함수가 실행되는 것입니다.<br>
+Web APIs는 'https://example.com/api'에서 데이터를 응답받은 후 콜백함수를 태스크 큐에 넣습니다. 이후 콜 스택이 비어있는 것을 확인하면 콜백함수를 콜 스택으로 밀어넣게 되고 콜백함수가 실행되는 것입니다.(나중에 나머지 실행)<br>
 
 따라서 위 코드는 response값이 존재하기 때문에 브라우저 콘솔 창에 출력이 됩니다.<br>
 
@@ -61,6 +61,6 @@ Web APIs는 'https://example.com/api'에서 데이터를 응답받은 후 콜백
 
 ![FrontEnd 04](../../../Image/frontend-05.gif)<br>
 
-[다음 글 보러가기 -> 콜백 함수](./Callback.md)
-
 참고 -> [이벤트 루프와 비동기 프로그래밍의 부상](https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%B6%80%EC%83%81-async-await%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%94%A9-%ED%8C%81-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-df65ffb4e7e)<br>
+
+[다음 글 보러가기 -> 콜백 함수](./Callback.md)
