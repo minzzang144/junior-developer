@@ -80,7 +80,7 @@ this는 호출부를 확인하고 다음에 열거할 4가지 규칙 중에 어�
 
   기본 바인딩에서는 foo() 자체로 호출되었지만 위 코드에서는 obj.foo()와 같이 호출되었다.
 
-  이와 같이 컨텍스트 객체가 함수를 호출할 시, 바로 이 컨텍스트 객체가 this에 암시(말 하지 않아도)적으로 바인딩 된다.
+  이와 같이 컨텍스트 객체가 함수를 호출할 시, 바로 이 컨텍스트 객체가 this에 `암시(말하지 않아도)적으로 바인딩` 된다.
 
   따라서 위 코드는 this는 obj가 되고 결과값은 2가 출력이 된다.
 
@@ -114,3 +114,125 @@ this는 호출부를 확인하고 다음에 열거할 4가지 규칙 중에 어�
   때문에 this 바인딩을 어느 값으로 고정하여 this가 현재 무엇을 바인딩하고 있는지 알 수 있다면 굉장히 편리할 것이다.
 
   그 방법은 다음 규칙이다.
+
+- 명시적 바인딩
+
+  암시적 바인딩에서는 함수를 객체에 넣고 객체 프로퍼티를 이용해 this를 간접적으로 바인딩했다.
+
+  이렇게 암시적으로 바인딩하기 위해 함수를 객체 안에 넣어서 사용하는 것은 위에서 봤다시피 반드시 그 객체에 바인딩이 된다는 보장이 없을뿐더러 바인딩이 소실되는 경우도 종종 있다.
+
+  따라서 어떤 객체를 this에 바인딩하겠다는 것을 명확히 밝힐 방법이 필요한데 그 예로 Function객체 Prototype 메서드로 가지고 있는 `call / apply / bind` 메서드이다.
+
+  call과 apply 메서드는 this에 바인딩할 객체를 첫번째 파라미터로 받고, 함수 호출 시 첫번째 파라미터로 받은 값을 this로 바인딩할 수 있다.
+
+  이처럼 this로 지정한 객체를 직접 바인딩하는 것을 `명시적 바인딩`이라고 한다.
+
+  ```
+  function foo() {
+    console.log(this.a);
+  }
+
+  var obj = {
+    a: 2
+  }
+
+  foo.call(obj); // 2
+  ```
+
+  문제는 이렇게 명시적으로 바인딩해도 this 바인딩이 도중에 소실되거나 임의로 다시 덮어씌여지는 것을 명시적 바인딩으로도 막을 수 없다는 것이다.
+
+  때문에 명시적 바인딩을 한 단계 감싸 절대적으로 바인딩되게 하는 `하드 바인딩`이 존재한다.
+
+  ```
+  function foo() {
+    console.log(this.a);
+  }
+
+  var obj = {
+    a:2
+  }
+
+  var bar function() {
+    foo.call(obj);
+  }
+
+  bar();
+  setTimeout(bar, 100);
+
+  bar.call(window); // 2
+  ```
+
+  위와 같이 함수 bar 내부에서 foo.call(obj)로 바인딩하면서 bar가 호출될 때마다 obj를 this에 강제 바인딩 하는 것이다.
+
+  이런 바인딩을 강력하고 명시적이어서 `하드 바인딩`이라고 하며 하드 바인딩을 하게 되면 재바인딩도 무시하게 된다.
+
+  재사용 가능한 헬퍼 함수를 사용하는 것도 동일한 패턴이다.
+
+  ```
+  function foo() {
+    console.log(this.a, something);
+    return this.a + something;
+  }
+
+  // 간단한 bind 헬퍼
+  function apply(fn, obj) {
+    return function() {
+      return fn.apply(obj, arguments);
+    }
+  }
+
+  var obj = {
+    a: 2
+  }
+
+  var bar = apply(foo, obj);
+  var b = bar(3); // 2 3
+  console.log(b); // 5
+  ```
+
+  현재는 헬퍼 함수를 구현하지 않아도 하드 바인딩을 가능케 하는 `Function.prototype.bind` 메서드가 존재한다.
+
+  즉, 위 코드와 아래 코드는 동일하다.
+
+  ```
+  function foo() {
+    console.log(this.a, something);
+    return this.a + something;
+  }
+
+  var obj = {
+    a: 2
+  }
+
+  var bar = foo.bind(obj);
+  var b = bar(3); // 2 3
+  console.log(b); // 5
+  ```
+
+- new 바인딩
+
+  함수 앞에 new를 붙여 생성자 호출을 하면 다음과 같은 일들이 저절로 일어난다.
+
+  1. 새 객체가 툭 만들어진다.
+  2. 새로 생성된 객체의 [[Prototype]]이 연결된다.
+  3. 새로 생성된 객체는 해당 함수 호출 시 this로 바인딩된다.
+  4. 이 함수가 자신의 또 다른 객체를 반환하지 않는 한 new와 함께 호출된 함수는 자동으로 새로 생성된 객체를 반환한다.
+
+  이와 같이 new 생성자와 함께 함수 호출을 하면 자동적으로 this가 새 객체에 바인딩 되게 된다.
+
+  아래 예제를 보자.
+
+  ```
+  function foo(a) {
+    this.a = a;
+  }
+
+  var bar = new foo(2);
+  console.log(bar.a);
+  ```
+
+  new 생성자를 붙여 foo()함수를 호출했고, 새로운 객체가 어딘가에 생성되었다.
+
+  또한 새로 생성된 객체는 foo 호출과 동시에 this에 자동적으로 바인딩 되었다. 따라서 bar.a는 새로운 객체의 a값을 가리키며 결과값은 2가 된다.
+
+  결국 new 생성자는 함수 호출 시 this를 새 객체에 바인딩하는 방법이며 이것을 `new 바인딩` 이라고 한다.

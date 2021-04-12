@@ -186,7 +186,7 @@ var는 hoisting이 일어나 글로벌 스코프에 선언됨으로써 반복할
 
 요약 -> 반복문 내에서는 let 키워드를 사용하여 호이스팅이 일어나지 않게 해주는 것이 좋다.<br>
 
-참고 -> You don't know JS
+참고 -> You don't know JS<br>
 참고 -> PoiemaWeb
 
 [다음 글 보러가기 -> Closure를 활용한 Module](../Module/Module.md)
