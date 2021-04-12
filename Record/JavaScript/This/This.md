@@ -236,3 +236,89 @@ this는 호출부를 확인하고 다음에 열거할 4가지 규칙 중에 어�
   또한 새로 생성된 객체는 foo 호출과 동시에 this에 자동적으로 바인딩 되었다. 따라서 bar.a는 새로운 객체의 a값을 가리키며 결과값은 2가 된다.
 
   결국 new 생성자는 함수 호출 시 this를 새 객체에 바인딩하는 방법이며 이것을 `new 바인딩` 이라고 한다.
+
+### 바인딩 순서
+
+현재까지 함수를 호출할 때의 4가지 this 바인딩에 대해 알아보았다.<br>
+
+만약 여러개의 바인딩 규칙이 중복되어 있다면 어떻게 될까? 이러한 경우에는 우선순위가 존재한다.<br>
+
+1. new로 함수를 호출했는가? -> 맞으면 새로운 객체가 this다.
+
+2. call / apply / bind로 함수를 호출했는가? 또한 하드 바인딩 형태로 호출되었는가? -> 맞으면 명시적으로 지정된 객체가 this이다.
+
+3. 함수를 객체가 소유하는 형태로 호출했는가? -> 맞으면 그 컨텍스트 객체가 this이다.
+
+4. 그 외의 경우에 this는 기본값(엄격 모드는 undefined / 비엄격 모드는 전역 객체)로 세팅된다.(기본 바인딩)
+
+1번부터 4번까지 순번이 낮을수록 우선순위를 가지며 순서대로 따져본 후 그중 맞아떨어지는 최초의 규칙을 적용한다.<br>
+
+중요한 것은 하드 바인딩조차 new 바인딩이 오버라이드 할 수 있다는 점이다.<br>
+
+굳이 new 바인딩으로 오버라이드 하는 경우는 많이 없지만 함수 파라미터를 일부 또는 전부 미리 세팅해야하는 경우 유용하게 사용된다.<br>
+
+```
+function foo(p1, p2) {
+  this.val = p1 + p2;
+}
+
+var bar = foo.bind(null, "p1"); // null 바인딩은 new 바인딩에 의해 오버라이드 되므로 의미가 없다는 것을 보여준다.
+var baz = new bar("p2"); // p1이 미리 세팅되었기 때문에 p2값만 넘겨준다.
+console.log(baz.val); // p1p2
+```
+
+### 바인딩 예외
+
+- this 무시
+
+  call, apply, bind 메서드의 첫번째 파라미터로 null 또는 undefined를 넘기면 바인딩이 무시되고 기본 바인딩 규칙이 적용된다.
+
+  하지만 굳이 null값을 명시적으로 바인딩 하는 것은 추후에 많은 에러를 야기시킬 수 있다.(프로그래밍 하다보면 바인딩이 예상한 값과 다르게 될 수 있기 때문)
+
+  바인딩을 굳이 할 필요가 없다면 텅빈 객체에라도 바인딩을 해두는 것이 좋다.
+
+  ```
+  function foo(a,b) {
+    console.log(a, b);
+  }
+
+  var nullObj = Object.create(null);
+
+  foo.apply(nullObj, [2, 3]);
+
+  var bar = foo.bind(nullObj, 2);
+  bar(3);
+  ```
+
+  이와 최소한 텅빈 객체에 바인딩하게 되면 어차피 빈 객체로 바인딩하게 되므로 전역 객체를 건드리는 부작용은 방지할 수 있다.
+
+- soft binding
+
+  앞에서 다뤄본 하드 바인딩은 함수의 유연성을 크게 떨어뜨리기 때문에 나중에 this를 암시적으로 바인딩하거나 명시적으로 바인딩하는 식으로 수동으로 오버라이드 하는 것은 불가능하다.
+
+  `softBind` 메서드는 this를 체크하는 부분에서 전역 객체나 undefined일 경우 미리 준비한 바인딩 객체로 세팅을 하며, 그 외의 경우 this는 손대지 않는다.
+
+  ```
+  function foo() {
+    console.log("name" + this.name);
+  }
+
+  var obj = {name: "obj"},
+    obj2 = {name: "obj2"},
+    obj3 = {name: "obj3"};
+
+  var fooObj = foo.softBind(obj);
+
+  fooObj(); // name: obj
+
+  obj2.foo = foo.softBind(obj);
+  obj2.foo(); // name: obj2
+
+  fooObj.call(obj3); // name: obj3
+
+  setTimeout(obj2.foo, 100); // name: obj <-- 소프트 바인딩이 적용됨
+  ```
+
+  소프트 바인딩이 탑재된 foo()함수는 this를 obj2나 obj3로 수동 바인딩을 할 수 있을 뿐만 아니라 undefined나 글로벌 객체로 바인딩되게 되면 기본 바인딩 규칙이 적용된다.
+
+[다음 글 보러가기 -> Arrow Function](./ArrowFunction.md)
