@@ -102,6 +102,12 @@ foo();
 
      This Object에는 동적으로 바인딩 되는 `this`객체의 정보가 담기게 된다.
 
+- Variable Environment
+
+  Variable Environment도 Lexical Environment와 동일하게 EnvironmentRecord / outer / thisbinding 에 대한 정보를 담고있지만 `var`로 선언된 변수만 저장한다는 점만 다르다.
+
+  즉, Lexical Environment는 let과 const에 대한 변수 정보만 담는 반면 Variable Environment는 var에 대한 변수만 담는다.
+
 ### 실행 컨텍스트의 생성과 실행
 
 실행 컨텍스트는 위 3가지 구성요소를 가지고 두 가지 단계(**생성단계** / **실행단계**)를 거친다.<br>
