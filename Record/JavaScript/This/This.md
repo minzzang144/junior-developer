@@ -197,7 +197,7 @@ this는 호출부를 확인하고 다음에 열거할 4가지 규칙 중에 어�
   즉, 위 코드와 아래 코드는 동일하다.
 
   ```
-  function foo() {
+  function foo(something) {
     console.log(this.a, something);
     return this.a + something;
   }
