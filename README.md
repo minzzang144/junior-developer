@@ -12,11 +12,17 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 ## Contents
 
+- [HTML](#HTML)
+
 - [JavaScript](#JavaScript)
 
 - [프론트엔드 CS](#프론트엔드-CS)
 
 - [백엔드 CS](#백엔드-CS)
+
+### HTML
+
+- [Cookie, Local Storage, Session Storage](./Record/HTML/Storage/Storage.md)
 
 ### JavaScript
 
