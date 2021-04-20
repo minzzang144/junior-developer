@@ -44,9 +44,15 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Exevcution Context](./Record/JavaScript/Context/Context.md)
 
-- [Event Capturing Bubbling](./Record/JavaScript/Event/Capturing-Bubbling.md)
+- Event
+
+  - [Event Capturing Bubbling](./Record/JavaScript/Event/Capturing-Bubbling.md)
 
   - [Event Delegation](./Record/JavaScript/Event/Delegation.md)
+
+- Object
+
+  - [Navtive Object VS Host Object](./Record/JavaScript/Object/Native-Host.md)
 
 ### 프론트엔드 CS
 
