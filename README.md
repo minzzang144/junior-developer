@@ -44,6 +44,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Exevcution Context](./Record/JavaScript/Context/Context.md)
 
+- [Event Capturing Bubbling](./Record/JavaScript/Event/Capturing-Bubbling.md)
+
 ### 프론트엔드 CS
 
 - [브라우저 렌더링 방식](./Record/FrontEnd/Browser-Render/Browser-Render.md)
