@@ -83,3 +83,5 @@ event target은 실제 이벤트가 시작된 `타겟`입니다. 반면, this는
 버블링과 캡처링은 `이벤트 위임`의 토대가 되며 이것은 이벤트 핸들링의 강력한 패턴이며 추후에 다뤄보겠습니다.<br>
 
 참고 -> [모던 자바스크립트 이벤트 캡처링과 버블링](https://ko.javascript.info/bubbling-and-capturing)<br>
+
+[다음 글로 이동하기 -> 이벤트 위임](./Delegation.md)

@@ -46,6 +46,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Event Capturing Bubbling](./Record/JavaScript/Event/Capturing-Bubbling.md)
 
+  - [Event Delegation](./Record/JavaScript/Event/Delegation.md)
+
 ### 프론트엔드 CS
 
 - [브라우저 렌더링 방식](./Record/FrontEnd/Browser-Render/Browser-Render.md)
