@@ -296,3 +296,5 @@ c();
 
 참고 -> [PoimaWeb / Context](https://poiemaweb.com/js-execution-context)<br>
 참고 -> [imacoolgiryo님의 EC 소개 글](https://velog.io/@imacoolgirlyo/JS-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-Hoisting-The-Execution-Context-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85-%EC%8B%A4%ED%96%89-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8-6bjsmmlmgy)<br>
+
+[다음 글로 이동하기 -> Prototype](../Prototype/Prototype.md)

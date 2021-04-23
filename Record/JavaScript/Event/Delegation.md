@@ -41,7 +41,7 @@
 
 하나의 테이블이 존재하고 테이블 안에 9개의 박스가 있습니다.<br>
 
-![JavaScript-09](../../../Image/javascript-09.png)
+![JavaScript-09](../../../Image/javascript-09.PNG)
 
 우리가 할 것은 테이블 안의 td태그를 클릭했을 때, 그 칸의 색을 강조하는 것 입니다.<br>
 

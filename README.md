@@ -44,6 +44,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Exevcution Context](./Record/JavaScript/Context/Context.md)
 
+- [Prototype](./Record/JavaScript/Prototype/Prototype.md)
+
 - Event
 
   - [Event Capturing Bubbling](./Record/JavaScript/Event/Capturing-Bubbling.md)
