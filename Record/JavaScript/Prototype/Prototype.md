@@ -171,3 +171,5 @@ myObject.hasOwnProperty("a"); // true
 ```
 
 `myObject.a++` 이 실행되었을 때 프로토타입 체인을 타고올라가 anotherObject.a의 값을 변경할 것 같지만 실제로는 anotherObject.a의 값인 2를 얻어 1만큼 증가시킨 결과값 3을 [[Put]]으로 myObject에 새로운 가려짐 프로퍼티 a를 생성하고 할당하게 된다.<br>
+
+클래스가 필요한 이유 | 프로토타입을 클래스처럼 쓰는 방법

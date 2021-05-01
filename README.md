@@ -85,3 +85,7 @@ Organize What I Studied until I Became a Junior Developer<br>
   - [GraphQL Type](./Record/BackEnd/GraphQL/Type.md)
 
   - [GraphQL Input](./Record/BackEnd/GraphQL/Input.md)
+
+### 자료구조(Data Structure)
+
+- [Stack](./Record/DataStructure/Stack.md)
