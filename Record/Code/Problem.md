@@ -4,3 +4,4 @@
 - [문자열 뒤집기](./Problem/9093.md)
 - [괄호](./Problem/9012.md)
 - [스택 수열](./Problem/1874.md)
+- [에디터](./Problem/1406.md)
