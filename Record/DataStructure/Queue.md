@@ -61,6 +61,10 @@ class Queue {
     }
     return str;
   }
+
+  size() {
+    return this._arr.length
+  }
 }
 
 const queue = new Queue();
