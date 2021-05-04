@@ -5,3 +5,5 @@
 - [괄호](./Problem/9012.md)
 - [스택 수열](./Problem/1874.md)
 - [에디터](./Problem/1406.md)
+- [큐](./Problem/10845.md)
+- [요세푸스](./Problem/1158.md)
