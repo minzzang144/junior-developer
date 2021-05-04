@@ -89,6 +89,7 @@ Organize What I Studied until I Became a Junior Developer<br>
 ### 자료구조(Data Structure)
 
 - [스택(Stack)](./Record/DataStructure/Stack.md)
+- [큐(Queue)](./Record/DataStructure/Queue.md)
 
 ### 코딩테스트(Coding Test)
 
