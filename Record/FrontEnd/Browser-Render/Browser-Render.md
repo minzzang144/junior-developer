@@ -1,5 +1,7 @@
 # 브라우저 렌더링 방식
 
+[이전 글로 이동하기 -> CSR(Client Side Rendering) vs SSR(Server Side Rendering)](../CSR-SSR/CSR-SSR.md)
+
 브라우저가 화면에 나타나는 모든 것을 렌더링 할 때, 렌더링 엔진과 자바스크립트 엔진을 사용해 다음과 같은 단계를 거칩니다.<br>
 
 ![FrontEnd 01](../../../Image/frontend-01.png)<br>

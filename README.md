@@ -58,6 +58,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 ### 프론트엔드 CS
 
+- [CSR(Client Side Rendering) vs SSR(Server Side Rendering)](./Record/FrontEnd/CSR-SSR/CSR-SSR.md)
+
 - [브라우저 렌더링 방식](./Record/FrontEnd/Browser-Render/Browser-Render.md)
 
 - [브라우저 동작 방식](./Record/FrontEnd/Browser-Action/Browser-Action.md)
