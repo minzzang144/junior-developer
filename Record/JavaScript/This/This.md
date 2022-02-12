@@ -152,12 +152,11 @@ this는 호출부를 확인하고 다음에 열거할 4가지 규칙 중에 어�
     a:2
   }
 
-  var bar function() {
+  function bar() {
     foo.call(obj);
   }
 
   bar();
-  setTimeout(bar, 100);
 
   bar.call(window); // 2
   ```
