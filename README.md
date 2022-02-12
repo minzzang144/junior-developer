@@ -1,7 +1,5 @@
 # Junior Developer
 
-**본 레포지토리는 TsuEl Blog 포스트로 옮겨질 예정입니다.**
-
 Organize What I Studied until I Became a Junior Developer<br>
 
 주니어 개발자가 될 때까지 공부한 것을 정리한다<br>
@@ -94,9 +92,3 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [스택(Stack)](./Record/DataStructure/Stack.md)
 - [큐(Queue)](./Record/DataStructure/Queue.md)
-
-### 코딩테스트(Coding Test)
-
-**백준 문제는 더 이상 업로드 하지 않고 프로그래머스 & 릿코드 위주로 교체할 예정입니다.**<br>
-
-- [코딩테스트](./Record/Code/Problem.md)
