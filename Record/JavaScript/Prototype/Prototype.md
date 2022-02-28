@@ -119,7 +119,7 @@ Foo.prototype.myName = function() {
 
 function Bar(name, label) {
   Foo.call(this, name);
-  this.label;
+  this.label = label;
 }
 
 Bar.prototype = Object.create(Foo.prototype);
