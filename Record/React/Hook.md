@@ -1,5 +1,27 @@
 # Hook
 
+### useEffect
+
+useEffect 훅은 클래스형 컴포넌트에서만 사용할 수 있었던 Lifecycle을 함수형 컴포넌트에서도 어느정도 사용 가능하게 도와주는 함수이다.
+
+```
+useEffect(<function>, <Array>);
+```
+
+`function`은 컴포넌트가 render 또는 re-render 되었을 때 실행하고 싶은 함수를 의미하고 `Array`에는 어떤 state가 변화되었을 때 컴포넌트를 re-render할지 그 state를 담는 Array형태의 파라미터입니다.
+
+- 화면이 처음 떴을때 실행
+
+  deps에 [] 빈배열을 넣을 때, life cycle중 componentDidmount처럼 실행
+
+- 화면이 사라질때 실행(clean up함수)
+
+  componentWillUnmount처럼 실행
+
+- deps에 넣은 파라미터값이 업데이트 됬을때 실행
+
+  componentDidUpdate처럼 실행
+
 ### useRef
 
 JavaScript 를 사용 할 때에는, 우리가 특정 DOM 을 선택해야 하는 상황에 getElementById, querySelector 같은 DOM Selector 함수를 사용해서 DOM 을 선택합니다.
