@@ -77,3 +77,20 @@ React.memo는 컴포넌트의 props 가 바뀌지 않았다면, 리렌더링을 
 ### 커스텀 훅은 왜 만드는 것일까?
 
 컴포넌트를 만들다보면, 반복되는 로직이 자주 발생합니다. 커스텀 Hooks 를 만들어서 반복되는 로직을 쉽게 재사용할 때 커스텀 훅은 유용합니다.
+
+### Context API
+
+컴포넌트 단위가 커지면 여러 개의 컴포넌트를 거쳐 상태를 전달해야할 수 도 있습니다. 프로젝트가 거대해지면 셀 수 없을 정도로 상태를 전달해야될 수도 있는데 이것을 `prop-drilling`이라고 합니다. 리액트의 Context API 를 사용하면, 프로젝트 안에서 전역적으로 사용 할 수 있는 값을 관리 할 수 있습니다. 이 값은 꼭 상태가 아니어도 되며 함수가 될 수도 있습니다.
+
+```
+const UserDispatch = React.createContext(null);
+```
+
+createContext 의 파라미터에는 Context 의 기본값을 설정할 수 있습니다. 여기서 설정하는 값은 Context 를 쓸 때 값을 따로 지정하지 않을 경우 사용되는 기본 값 입니다.
+
+```
+const value = [1, 2, 3];
+<UserDispatch.Provider value={value}>...</UserDispatch.Provider>
+```
+
+Provider 에 의하여 감싸진 컴포넌트 중 어디서든지 우리가 Context 의 값을 다른 곳에서 바로 조회해서 사용 할 수 있습니다.
