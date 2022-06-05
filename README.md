@@ -60,6 +60,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 ### TypeScript
 
+- [Interview](./Record/TypeScript/Interview.md)
+
 - [Basic Types](./Record/TypeScript/BasicTypes.md)
 
 - [Interface](./Record/TypeScript/Interface.md)
