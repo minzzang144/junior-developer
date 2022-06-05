@@ -62,6 +62,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Basic Types](./Record/TypeScript/BasicTypes.md)
 
+- [Interface](./Record/TypeScript/Interface.md)
+
 ### React
 
 - [React](./Record/React/React.md)
