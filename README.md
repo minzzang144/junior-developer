@@ -58,15 +58,17 @@ Organize What I Studied until I Became a Junior Developer<br>
 
   - [Navtive Object VS Host Object](./Record/JavaScript/Object/Native-Host.md)
 
+### TypeScript
+
+- [Basic Types](./Record/TypeScript/BasicTypes.md)
+
 ### React
 
-- React
+- [React](./Record/React/React.md)
 
-  - [React](./Record/React/React.md)
+- [Hook](./Record/React/Hook.md)
 
-  - [Hook](./Record/React/Hook.md)
-
-  - [React](./Record/React/Experience.md)
+- [React](./Record/React/Experience.md)
 
 ### 프론트엔드 CS
 
