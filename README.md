@@ -76,7 +76,11 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 ### Vue
 
-- [Vue](./Record/Vue/Start.md)
+- [Start](./Record/Vue/Start.md)
+
+- [Instance](./Record/Vue/Instance.md)
+
+- [Template](./Record/Vue/Template.md)
 
 ### 프론트엔드 CS
 
