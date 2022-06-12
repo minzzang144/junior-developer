@@ -82,6 +82,10 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Template](./Record/Vue/Template.md)
 
+- [Data Methods](./Record/Vue/Data-Methods.md)
+
+- [Computed watch](./Record/Vue/Computed-watch.md)
+
 ### 프론트엔드 CS
 
 - [CSR(Client Side Rendering) vs SSR(Server Side Rendering)](./Record/FrontEnd/CSR-SSR/CSR-SSR.md)
