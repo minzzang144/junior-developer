@@ -92,6 +92,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [List Rendering](./Record/Vue/List-Rendering.md)
 
+- [Event Handling](./Record/Vue/Event-Handling.md)
+
 ### 프론트엔드 CS
 
 - [CSR(Client Side Rendering) vs SSR(Server Side Rendering)](./Record/FrontEnd/CSR-SSR/CSR-SSR.md)
