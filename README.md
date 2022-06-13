@@ -100,6 +100,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Props](./Record/Vue/Props.md)
 
+- [Non Prop](./Record/Vue/Non-prop.md)
+
 ### 프론트엔드 CS
 
 - [CSR(Client Side Rendering) vs SSR(Server Side Rendering)](./Record/FrontEnd/CSR-SSR/CSR-SSR.md)
