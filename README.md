@@ -88,7 +88,9 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Class Style](./Record/Vue/Class-style.md)
 
-- [Conditional Rendering](./Record/Vue/Conditional-rendering.md.md)
+- [Conditional Rendering](./Record/Vue/Conditional-rendering.md)
+
+- [List Rendering](./Record/Vue/List-Rendering.md)
 
 ### 프론트엔드 CS
 
