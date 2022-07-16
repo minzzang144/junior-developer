@@ -145,6 +145,10 @@ Organize What I Studied until I Became a Junior Developer<br>
 - [스택(Stack)](./Record/DataStructure/Stack.md)
 - [큐(Queue)](./Record/DataStructure/Queue.md)
 
+### 알고리즘(Algorithm)
+
+- [그리디 알고리즘(Greedy)](./Record/Algorithm/Greedy.md)
+
 ### ETC
 
 - [클린 코드에 대하여](./Record/ETC/CleanCode.md)
