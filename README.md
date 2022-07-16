@@ -140,14 +140,10 @@ Organize What I Studied until I Became a Junior Developer<br>
 
   - [GraphQL Input](./Record/BackEnd/GraphQL/Input.md)
 
-### 자료구조(Data Structure)
-
-- [스택(Stack)](./Record/DataStructure/Stack.md)
-- [큐(Queue)](./Record/DataStructure/Queue.md)
-
 ### 알고리즘(Algorithm)
 
 - [그리디 알고리즘(Greedy)](./Record/Algorithm/Greedy.md)
+- [그리디 알고리즘(Greedy)](./Record/Algorithm/Recursive.md)
 
 ### ETC
 
