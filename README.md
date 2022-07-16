@@ -106,6 +106,8 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [Slots](./Record/Vue/Slots.md)
 
+- [Provide & Inject](./Record/Vue/Provide-inject.md)
+
 ### 프론트엔드 CS
 
 - [CSR(Client Side Rendering) vs SSR(Server Side Rendering)](./Record/FrontEnd/CSR-SSR/CSR-SSR.md)
