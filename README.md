@@ -144,6 +144,7 @@ Organize What I Studied until I Became a Junior Developer<br>
 
 - [그리디 알고리즘(Greedy)](./Record/Algorithm/Greedy.md)
 - [재귀함수(Recursive Function)](./Record/Algorithm/Recursive.md)
+- [BFS](./Record/Algorithm/BFS.md)
 - [DFS](./Record/Algorithm/DFS.md)
 
 ### ETC
