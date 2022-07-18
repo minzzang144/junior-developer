@@ -43,7 +43,7 @@ function quickSort(array, start, end) {
   quickSort(array, right + 1, end);
 }
 
-console.log(quickSort(arr));
+console.log(quickSort(arr, 0, arr.length - 1));
 // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
