@@ -146,6 +146,9 @@ Organize What I Studied until I Became a Junior Developer<br>
 - [재귀함수(Recursive Function)](./Record/Algorithm/Recursive.md)
 - [BFS](./Record/Algorithm/BFS.md)
 - [DFS](./Record/Algorithm/DFS.md)
+- 정렬
+  - [선택 정렬](./Record/Algorithm/Sort/Selection.md)
+  - [삽입 정렬](./Record/Algorithm/Sort/Insertion.md)
 
 ### ETC
 
