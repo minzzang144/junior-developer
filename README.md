@@ -149,6 +149,7 @@ Organize What I Studied until I Became a Junior Developer<br>
 - 정렬
   - [선택 정렬](./Record/Algorithm/Sort/Selection.md)
   - [삽입 정렬](./Record/Algorithm/Sort/Insertion.md)
+  - [퀵 정렬](./Record/Algorithm/Sort/Quick.md)
 
 ### ETC
 
